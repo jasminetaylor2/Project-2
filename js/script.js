@@ -8,22 +8,20 @@ FSJS project 2 - List Filter and Pagination
 
 const studentList = document.querySelectorAll('.student-item');
 const itemsPerPage = 10;                                 //represents the number items to show on each page
+                                                   //this function should hide all students expect 10 you want on given page
 
-console.log(studentList);
-
-//this function should hide all students expect 10 you want on given page
 const showPage = (list, page) => {
    let startIndex = (page * itemsPerPage) - itemsPerPage; //starting point for the index '0'
    let endIndex = page * itemsPerPage;                   //ending point for index '10' 
    for (let i = 0; i < list.length; i += 1) {                 //for loop to run thru entire student list items'li'
       if (i >= startIndex && i < endIndex) {           //conditional statement that removes all list items from page
-         list[i].style.display = "block";              //these manipulate the list items on the page using CSS 'display'to show the element 
+         list[i].style.display = "block";              //these manipulate the DOM list items on the page using CSS 'display'to show the element 
       } else {
-         list[i].style.display = "none";            //these manipulate the list items on the page using CSS 'display'to hide the element 
+         list[i].style.display = "none";            //these manipulate the DOM list items on the page using CSS 'display'to hide the element 
       }
    }
 }
-
+//teaches how to manipulate items on the DOM/html page
 showPage(studentList, 1);                          // show the firrst 10 student on list
 
 
