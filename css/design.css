@@ -4,6 +4,17 @@ body{
   color: #222;
 }
 
+header{
+  border: 5px solid white;
+  padding: 30px;
+  margin: 15px;
+  color:white;
+  font-size: 35px;
+  text-align: center;
+  background: #888;
+
+}
+
 .page{
   margin: 50px auto;
   width: 70%;
